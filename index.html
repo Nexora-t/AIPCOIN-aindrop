@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIPCOIN - منصة تعدين الذكاء الاصطناعي</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body class="ar">
+    <!-- القائمة العلوية -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="AIPCOIN Logo">
+            <h1>AIPCOIN</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#mining">التعدين</a></li>
+                <li><a href="#user-info">معلوماتك</a></li>
+                <li><a href="#referral">نظام الإحالة</a></li>
+                <li><a href="#social">مواقع التواصل</a></li>
+                <li><a href="#ai-analysis">تحليل الذكاء الاصطناعي</a></li>
+                <!-- سيتم إضافة قائمة اللغات هنا برمجياً -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <section class="hero">
+        <h2>منصة تعدين AIPCOIN</h2>
+        <p>اكتشف قوة الذكاء الاصطناعي في تحليل الأسواق المالية وتعدين العملات الرقمية. ابدأ الآن في تعدين AIPCOIN واستفد من تقنيات الذكاء الاصطناعي المتقدمة لتحليل أنماط الشموع والتنبؤ بحركة الأسهم.</p>
+    </section>
+
+    <!-- قسم التعدين -->
+    <section id="mining" class="section">
+        <h3 class="section-title"><i class="fas fa-microchip"></i> تعدين العملة</h3>
+        <div class="mining-container">
+            <div class="mining-animation">
+                <div class="mining-circle">
+                    <i class="fas fa-coins"></i>
+                </div>
+                <button id="mining-button" class="mining-button">
+                    <i class="fas fa-hammer"></i>
+                </button>
+            </div>
+            <div class="mining-stats">
+                <p>رصيدك الحالي: <span class="amount" id="mining-amount">0.00</span> AIPCOIN</p>
+                <p>معدل التعدين: <span id="mining-rate">1 AIPCOIN كل 11 ثانية</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم معلومات المستخدم -->
+    <section id="user-info" class="section">
+        <h3 class="section-title"><i class="fas fa-user"></i> معلوماتك</h3>
+        <div class="user-form">
+            <div class="form-group">
+                <label for="user-name">الاسم</label>
+                <input type="text" id="user-name" placeholder="أدخل اسمك">
+            </div>
+            <div class="form-group">
+                <label for="wallet-address">عنوان المحفظة</label>
+                <input type="text" id="wallet-address" placeholder="أدخل عنوان محفظتك">
+            </div>
+            <div class="form-group">
+                <label for="coin-amount">كمية العملات</label>
+                <input type="text" id="coin-amount" readonly>
+            </div>
+            <button id="generate-qr" class="btn">إنشاء رمز QR</button>
+        </div>
+    </section>
+
+    <!-- قسم رمز QR -->
+    <section class="section qr-section">
+        <h3 class="section-title"><i class="fas fa-qrcode"></i> رمز QR الخاص بك</h3>
+        <p>امسح رمز QR أدناه لمشاركة معلوماتك ومحفظتك</p>
+        <div id="qrcode" class="qrcode-container"></div>
+    </section>
+
+    <!-- قسم الإحالة -->
+    <section id="referral" class="section">
+        <h3 class="section-title"><i class="fas fa-link"></i> نظام الإحالة</h3>
+        <p>شارك الرابط الخاص بك مع أصدقائك واحصل على مكافآت عندما ينضمون!</p>
+        <div class="referral-link-container">
+            <input type="text" id="referral-link" readonly>
+            <button id="copy-link" class="btn">نسخ</button>
+        </div>
+        <p>عدد الإحالات: <span id="referral-count">0</span></p>
+        <p>المكافآت المستلمة: <span id="referral-rewards">0</span> AIPCOIN</p>
+        <div class="share-buttons">
+            <a href="https://www.facebook.com/profile.php?id=61566919956366" id="share-facebook" class="share-btn facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/SAppstoon60072?t=RmNCTQy9CZI4l0FwbjMXig&s=09" id="share-twitter" class="share-btn twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://t.me/AIPcoin6" id="share-telegram" class="share-btn telegram">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+            <a href="https://discord.gg/SmAEwpnc" id="share-Discord" class="share-btn whatsapp">
+                <i class="fab fa-discord"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- قسم مواقع التواصل الاجتماعي -->
+    <section id="social" class="section">
+        <h3 class="section-title"><i class="fas fa-share-alt"></i> مواقع التواصل الاجتماعي</h3>
+        <p>تفاعل مع مواقع التواصل الاجتماعي واحصل على 50 عملة AIPCOIN لكل موقع!</p>
+        <div class="social-platforms">
+            <div class="social-platform" data-platform="twitter">
+                <i class="fab fa-twitter"></i>
+                <h4>تويتر</h4>
+                <span class="reward">+50 AIPCOIN</span>
+                <span class="status" id="twitter-status">غير مكتمل</span>
+            </div>
+            <div class="social-platform" data-platform="facebook">
+                <i class="fab fa-facebook-f"></i>
+                <h4>فيسبوك</h4>
+                <span class="reward">+50 AIPCOIN</span>
+                <span class="status" id="facebook-status">غير مكتمل</span>
+            </div>
+            <div class="social-platform" data-platform="telegram">
+                <i class="fab fa-telegram-plane"></i>
+                <h4>تيليجرام</h4>
+                <span class="reward">+50 AIPCOIN</span>
+                <span class="status" id="telegram-status">غير مكتمل</span>
+            </div>
+            <div class="social-platform" data-platform="discord">
+                <i class="fab fa-discord"></i>
+                <h4>ديسكورد</h4>
+                <span class="reward">+50 AIPCOIN</span>
+                <span class="status" id="discord-status">غير مكتمل</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم تحليل الذكاء الاصطناعي -->
+    <section id="ai-analysis" class="section">
+        <h3 class="section-title"><i class="fas fa-robot"></i> تحليل الذكاء الاصطناعي</h3>
+        <p>يستخدم AIPCOIN تقنيات الذكاء الاصطناعي المتقدمة لتحليل أنماط الشموع والتنبؤ بحركة الأسهم في السوق.</p>
+        <div class="ai-image">
+            <img src="ai-analysis.png" alt="تحليل الذكاء الاصطناعي">
+        </div>
+        <div class="stats-container">
+            <div class="stat-card">
+                <h4>إجمالي العرض</h4>
+                <p class="value">1,000,000,000</p>
+                <p>AIPCOIN</p>
+            </div>
+            <div class="stat-card">
+                <h4>دقة التنبؤ</h4>
+                <p class="value">87%</p>
+                <p>في تحليل الاتجاهات</p>
+            </div>
+            <div class="stat-card">
+                <h4>المعاملات اليومية</h4>
+                <p class="value">24,500+</p>
+                <p>عملية تعدين وتحويل</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer>
+        <p>جميع الحقوق محفوظة © 2025 AIPCOIN - منصة تعدين الذكاء الاصطناعي</p>
+    </footer>
+
+    <!-- ملفات JavaScript -->
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
