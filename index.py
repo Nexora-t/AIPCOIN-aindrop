@@ -1,4 +1,4 @@
-import http.server
+PORTost http.server
 import socketserver
 
 PORT = 8080
@@ -59,5 +59,5 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
             self.send_error(404, "الصفحة غير موجودة")
 
 with socketserver.TCPServer(("", PORT), MyHandler) as httpd:
-    print(f"🚀 الخادم يعمل على http://localhost:{PORT}")
+    print(f"🚀 الخادم يعمل على https://nexora-t.github.io/AIPCOIN-aindrop:{PORT}")
     httpd.serve_forever()
